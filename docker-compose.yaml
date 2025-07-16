@@ -1,0 +1,46 @@
+services:
+  ecommerce-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - DEV=true
+    environment:
+      POSTGRES_DB: store_db
+      POSTGRES_USER: sabi_boi
+      POSTGRES_PASSWORD: thesabiboi
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/src/
+    working_dir: /src
+    command: >
+      sh -c "python3 manage.py makemigrations &&
+             python3 manage.py migrate &&
+             python3 manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+
+  postgres:
+    image: postgres:12.19-bullseye
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER -d $POSTGRES_DB"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+      start_interval: 5s
+    ports:
+      - 5432:5432
+    volumes:
+      - ecommerce-postgresql:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  ecommerce-postgresql:

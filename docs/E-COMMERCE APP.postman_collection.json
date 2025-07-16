@@ -1,0 +1,672 @@
+{
+	"info": {
+		"_postman_id": "bc9fdc3f-bd83-499e-b9e1-1dbb6f256491",
+		"name": "E-COMMERCE APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46800134",
+		"_collection_link": "https://blue-trinity-9001029.postman.co/workspace/sabi_boi's-Workspace~2d36006c-49b4-4cf9-8f24-e846c8169eee/collection/46800134-bc9fdc3f-bd83-499e-b9e1-1dbb6f256491?action=share&source=collection_link&creator=46800134"
+	},
+	"item": [
+		{
+			"name": "list-products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/store/products",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"store",
+						"products"
+					]
+				},
+				"description": "## API Request: Retrieve Products\n\nThis API request is an HTTP GET request to the endpoint `{{BASE_URL}}/store/products`. Its primary purpose is to retrieve a list of products available in the store. The request does not require any input parameters.\n\n### Response Structure\n\nThe response structure is in JSON format and includes an array of product objects, each containing the following fields:\n\n- **id** (integer): A unique identifier for the product.\n    \n- **name** (string): The name of the product.\n    \n- **description** (string): A brief description of the product.\n    \n- **inventory** (integer): The quantity of the product available in stock.\n    \n- **unit_price** (string): The price of the product per unit.\n    \n- **collection** (string): The collection to which the product belongs.\n    \n- **category** (string): The category of the product.\n    \n\n### Example Response\n\nA successful response with a status code of 200 may look like this:\n\n``` json\n[{\"id\":12,\"name\":\"\",\"description\":\"\",\"inventory\":0,\"unit_price\":\"\",\"collection\":\"\",\"category\":\"\"}]\n\n ```\n\nThis indicates that the request was processed successfully and the product data is returned in the expected format."
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/store/products",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 06:59:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4835"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 12,\n        \"name\": \"bag\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"bags\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"bagss\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"bagsss\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Brocky\",\n        \"description\": \"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\",\n        \"inventory\": 4535,\n        \"unit_price\": \"6255.78\",\n        \"collection\": \"Collection1\",\n        \"category\": \"Category1\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Bud\",\n        \"description\": \"Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\\n\\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\\n\\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\",\n        \"inventory\": 3921,\n        \"unit_price\": \"3638.07\",\n        \"collection\": \"Collection1\",\n        \"category\": \"Category1\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Gonzalo\",\n        \"description\": \"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\\n\\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\\n\\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\",\n        \"inventory\": 658,\n        \"unit_price\": \"6170.69\",\n        \"collection\": \"Collection1\",\n        \"category\": \"Category1\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Janos\",\n        \"description\": \"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\",\n        \"inventory\": 3035,\n        \"unit_price\": \"7259.42\",\n        \"collection\": \"Collection2\",\n        \"category\": \"Apparel\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Judd\",\n        \"description\": \"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\\n\\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\\n\\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\",\n        \"inventory\": 6309,\n        \"unit_price\": \"5561.15\",\n        \"collection\": \"Collection2\",\n        \"category\": \"Category1\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Korney\",\n        \"description\": \"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\\n\\nIn congue. Etiam justo. Etiam pretium iaculis justo.\",\n        \"inventory\": 5787,\n        \"unit_price\": \"4768.46\",\n        \"collection\": \"Collection2\",\n        \"category\": \"Category2\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Odele\",\n        \"description\": \"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\\n\\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\",\n        \"inventory\": 5501,\n        \"unit_price\": \"4463.81\",\n        \"collection\": \"Collection1\",\n        \"category\": \"Category2\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Renell\",\n        \"description\": \"Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\\n\\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\",\n        \"inventory\": 7366,\n        \"unit_price\": \"9818.83\",\n        \"collection\": \"Collection2\",\n        \"category\": \"Apparel\"\n    },\n    {\n        \"id\": 1,\n        \"name\": \"Richmound\",\n        \"description\": \"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\\n\\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\",\n        \"inventory\": 6471,\n        \"unit_price\": \"6694.38\",\n        \"collection\": \"Collection1\",\n        \"category\": \"Category1\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Selia\",\n        \"description\": \"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\",\n        \"inventory\": 7534,\n        \"unit_price\": \"9289.10\",\n        \"collection\": \"Collection3\",\n        \"category\": \"Apparel\"\n    },\n    {\n        \"id\": 16,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"inventory\": 2147483647,\n        \"unit_price\": \"2968.00\",\n        \"collection\": \"string\",\n        \"category\": \"string\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"test\",\n        \"description\": \"hustlr test\",\n        \"inventory\": 34,\n        \"unit_price\": \"16.34\",\n        \"collection\": \"Collection1\",\n        \"category\": \"Apparel\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "retrieve-product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/store/products/12",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"store",
+						"products",
+						"12"
+					]
+				},
+				"description": "### Get Product by ID\n\nThis endpoint retrieves detailed information about a specific product from the store's inventory using its unique identifier. The product ID is specified in the URL path.\n\n#### Request\n\n- **Method**: GET\n    \n- **Endpoint**: `{{BASE_URL}}/store/products/{id}`\n    \n- **Path Parameter**:\n    \n    - `id` (required): The unique identifier of the product you wish to retrieve.\n        \n\n#### Response\n\nUpon a successful request, the API returns a JSON object with the following structure:\n\n- **id**: (integer) The unique identifier of the product.\n    \n- **name**: (string) The name of the product.\n    \n- **description**: (string) A brief description of the product.\n    \n- **inventory**: (integer) The current inventory level of the product.\n    \n- **unit_price**: (string) The price per unit of the product.\n    \n- **collection**: (string) The collection to which the product belongs.\n    \n- **category**: (string) The category under which the product is classified.\n    \n\n#### Example Response\n\n``` json\n{\n    \"id\": 12,\n    \"name\": \"bag\",\n    \"description\": \"A leather bag\",\n    \"inventory\": 12,\n    \"unit_price\": \"0.00\",\n    \"collection\": \"Back to school Promo\",\n    \"category\": \"Wearables\"\n}\n\n ```\n\nThis endpoint is useful for applications that need to display product details to users or for inventory management purposes."
+			},
+			"response": [
+				{
+					"name": "product-not-found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/store/products/0",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products",
+								"0"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 07:06:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Not found.\"\n}"
+				},
+				{
+					"name": "success-retrieve-sample-product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/store/products/12",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products",
+								"12"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 07:06:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 12,\n    \"name\": \"bag\",\n    \"description\": \"A leather bag\",\n    \"inventory\": 12,\n    \"unit_price\": \"0.00\",\n    \"collection\": \"Back to school Promo\",\n    \"category\": \"Wearables\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create-product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Oud\",\n    \"description\": \"Perfume\",\n    \"inventory\": 14,\n    \"unit_price\": \"0.50\",\n    \"collection\": \"Back to school Promo\",\n    \"category\": \"Wearables\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/store/products/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"store",
+						"products",
+						""
+					]
+				},
+				"description": "## Add Product\n\nThis endpoint allows you to add a new product to the store's inventory.\n\n### Request\n\n- **Method**: `POST`\n    \n- **Endpoint**: `{{BASE_URL}}/store/products/`\n    \n- ParameterTypeDescription`name`stringThe name of the product.`description`stringA brief description of the product.`inventory`integerThe number of items available in stock.`unit_price`stringThe price per unit of the product.`collection`stringThe promotional collection the product belongs to.`category`stringThe category under which the product is listed.\n    \n\n### Response\n\nUpon successful creation of the product, the API responds with a status code of `201 Created` and returns a JSON object containing the following fields:\n\n- `id`: The unique identifier for the newly created product.\n    \n- `name`: The name of the product.\n    \n- `description`: The description of the product.\n    \n- `inventory`: The current inventory count of the product.\n    \n- `unit_price`: The price of the product.\n    \n- `collection`: The collection name of the product.\n    \n- `category`: The category of the product.\n    \n\n### Example Response\n\n``` json\n{\n  \"id\": 0,\n  \"name\": \"\",\n  \"description\": \"\",\n  \"inventory\": 0,\n  \"unit_price\": \"\",\n  \"collection\": \"\",\n  \"category\": \"\"\n}\n\n ```\n\nThis response structure confirms that the product has been successfully added to the inventory."
+			},
+			"response": [
+				{
+					"name": "inventory-and-unit-price-validations",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Oud\",\n    \"description\": \"Perfume\",\n    \"inventory\": -1,\n    \"unit_price\": \"0.00\",\n    \"collection\": \"Back to school Promo\",\n    \"category\": \"Wearables\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/store/products/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 07:13:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "115"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"inventory\": [\n        \"Ensure this value is greater than or equal to 0.\"\n    ],\n    \"unit_price\": [\n        \"Unit price cannot be 0 or less.\"\n    ]\n}"
+				},
+				{
+					"name": "product-created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Oud\",\n    \"description\": \"Perfume\",\n    \"inventory\": 14,\n    \"unit_price\": \"0.50\",\n    \"collection\": \"Back to school Promo\",\n    \"category\": \"Wearables\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/store/products/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 07:20:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "140"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 18,\n    \"name\": \"Oud\",\n    \"description\": \"Perfume\",\n    \"inventory\": 14,\n    \"unit_price\": \"0.50\",\n    \"collection\": \"Back to school Promo\",\n    \"category\": \"Wearables\"\n}"
+				}
+			]
+		},
+		{
+			"name": "filtered-products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/store/products?category=electronics",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"store",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "electronics"
+						}
+					]
+				},
+				"description": "## Get Products by Category\n\nThis endpoint retrieves a list of products from the store based on the specified category. In this case, the category is set to \"electronics\".\n\n### Request\n\n- **Method**: GET\n    \n- **Endpoint**: `{{BASE_URL}}/store/products?category=electronics`\n    \n\n### Query Parameters\n\n- `category` (string): The category of products to filter by. In this case, it should be set to \"electronics\".\n    \n\n### Response\n\n- **Status Code**: 200 OK\n    \n- **Content-Type**: application/json\n    \n\n#### Response Body Structure\n\nThe response body is a JSON array that contains objects representing the products. Each product object has the following structure:\n\n- `id` (integer): A unique identifier for the product.\n    \n- `name` (string): The name of the product.\n    \n- `description` (string): A brief description of the product.\n    \n- `inventory` (integer): The number of items available in stock.\n    \n- `unit_price` (string): The price of a single unit of the product.\n    \n- `collection` (string): The collection to which the product belongs.\n    \n- `category` (string): The category of the product.\n    \n\n#### Example Responses\n\n1. \\[{\"id\":0,\"name\":\"\",\"description\":\"\",\"inventory\":0,\"unit_price\":\"\",\"collection\":\"\",\"category\":\"\"}\\]\n    \n2. \\[\\]\n    \n\nThis endpoint is useful for clients looking to display or process products within a specific category, allowing for targeted inventory management and user experience enhancements."
+			},
+			"response": [
+				{
+					"name": "filtered-products-apparel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/store/products?category=Apparel",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Apparel"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 07:15:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1142"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"name\": \"Janos\",\n        \"description\": \"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\",\n        \"inventory\": 3035,\n        \"unit_price\": \"7259.42\",\n        \"collection\": \"Collection2\",\n        \"category\": \"Apparel\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Renell\",\n        \"description\": \"Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\\n\\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\",\n        \"inventory\": 7366,\n        \"unit_price\": \"9818.83\",\n        \"collection\": \"Collection2\",\n        \"category\": \"Apparel\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Selia\",\n        \"description\": \"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\",\n        \"inventory\": 7534,\n        \"unit_price\": \"9289.10\",\n        \"collection\": \"Collection3\",\n        \"category\": \"Apparel\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"test\",\n        \"description\": \"hustlr test\",\n        \"inventory\": 34,\n        \"unit_price\": \"16.34\",\n        \"collection\": \"Collection1\",\n        \"category\": \"Apparel\"\n    }\n]"
+				},
+				{
+					"name": "filtered-products-wearables",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/store/products?category=wearables",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "wearables"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 07:18:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "763"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 12,\n        \"name\": \"bag\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"bags\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"bagss\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"bagsss\",\n        \"description\": \"A leather bag\",\n        \"inventory\": 12,\n        \"unit_price\": \"0.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    },\n    {\n        \"id\": 17,\n        \"name\": \"NIKE Dunks\",\n        \"description\": \"An original leather shoe\",\n        \"inventory\": 12,\n        \"unit_price\": \"1500.00\",\n        \"collection\": \"Back to school Promo\",\n        \"category\": \"Wearables\"\n    }\n]"
+				},
+				{
+					"name": "no-matching-products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/store/products?category=electronics",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"store",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "electronics"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 16 Jul 2025 07:21:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		}
+	]
+}
