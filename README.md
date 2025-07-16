@@ -25,6 +25,18 @@ Access the development server at [http://0.0.0.0:8000](http://0.0.0.0:8000) in y
 
 ---
 
+## 🧪 Populating the Database with Test Data
+
+You can populate the database with sample products using the provided seed file:
+
+```bash
+python manage.py loaddata database/seed.json
+```
+
+This will load the test data from `database/seed.json` into your database.
+
+---
+
 ## 📚 API Documentation
 
 - **Postman Collection**: See `docs/E-COMMERCE APP.postman_collection.json` in this repo for full API documentation and sample requests.
@@ -84,3 +96,8 @@ curl -X POST http://0.0.0.0:8000/store/products/ \
 - The project uses Python, Django, and Docker for a robust, containerized backend API easy to run on any platform.
 - To run locally, simply use `docker compose up` after cloning the repository and changing directory into the project folder.
 - Full API documentation and sample requests are provided in the included Postman collection.
+
+## ✏️ Brief Note
+
+This project is built using Python, Django, and Django REST Framework, containerized with Docker for easy setup and deployment.
+To run the project locally, simply use `docker compose up` after cloning the repository.
