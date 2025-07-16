@@ -16,7 +16,7 @@ A simple backend API to manage products for an e-commerce platform.
 ## 🚀 How to Run the Project
 
 ```bash
-git clone -b develop https://github.com/seyawudba/hustlr-test-app
+git clone -b develop https://github.com/seyawudba/hustlr-ecommerce
 cd hustlr-ecommerce
 docker compose up
 ```
